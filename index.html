@@ -1,13 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juanito alcallaba</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMPRESA — We Build Game Studios</title>
+  <meta name="description" content="EMPRESA is a creative powerhouse that builds companies for videogame developers. From concept to launch, we forge the studios of tomorrow." />
+  <meta name="keywords" content="game studio creation, videogame developers, studio incubator, creative company building, indie games" />
+  <meta property="og:title" content="EMPRESA — We Build Game Studios" />
+  <meta property="og:description" content="We forge companies for videogame developers." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1 id="rojo">mi abuela</h1>
-    <p> peruano</p>
+
+  <!-- PROGRESS BAR -->
+  <div id="progress"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- BACK TO TOP -->
+  <a href="#home" id="back-top" aria-label="Back to top">↑</a>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <a href="#home" onclick="closeMobile()">Home</a>
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#products" onclick="closeMobile()">Products</a>
+    <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+    <a href="#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- =============================================
+       NAVIGATION
+  ============================================= -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#home" class="nav-logo" aria-label="EMPRESA home">
+      <span class="nav-logo-dot"></span>
+      EMPRESA
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Start a Project</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- =============================================
+       HOME / HERO
+  ============================================= -->
+  <section id="home" aria-label="Hero section">
+    <div class="hero-bg-blobs" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        Studio Forge · Est. 2019
+      </div>
+      <h1 class="hero-headline">
+        <span class="word">We&nbsp;</span>
+        <span class="word">Build&nbsp;</span>
+        <span class="word">Game&nbsp;</span>
+        <span class="word">Studios.</span>
+      </h1>
+      <p class="hero-sub">
+        EMPRESA is the creative powerhouse behind the next generation of videogame developers. We turn visionary creators into fully-formed companies — from brand identity to legal structure, funding strategy to team building.
+      </p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn-primary">See Our Work <span class="arrow">→</span></a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="hero-stats" aria-label="Key statistics">
+      <div class="hero-stat">
+        <span class="hero-stat-num">47+</span>
+        <span class="hero-stat-label">Studios Launched</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">$12M</span>
+        <span class="hero-stat-label">Funding Secured</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">200M</span>
+        <span class="hero-stat-label">Players Reached</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Studio Building</span>
+      <span class="marquee-item">Brand Strategy</span>
+      <span class="marquee-item">Funding Support</span>
+      <span class="marquee-item">Legal Setup</span>
+      <span class="marquee-item">Team Assembly</span>
+      <span class="marquee-item">Go-to-Market</span>
+      <span class="marquee-item">Community Growth</span>
+      <span class="marquee-item">Investment Pitch</span>
+      <span class="marquee-item">Studio Building</span>
+      <span class="marquee-item">Brand Strategy</span>
+      <span class="marquee-item">Funding Support</span>
+      <span class="marquee-item">Legal Setup</span>
+      <span class="marquee-item">Team Assembly</span>
+      <span class="marquee-item">Go-to-Market</span>
+      <span class="marquee-item">Community Growth</span>
+      <span class="marquee-item">Investment Pitch</span>
+    </div>
+  </div>
+
+  <!-- =============================================
+       SERVICES
+  ============================================= -->
+  <section id="services" aria-label="Services">
+    <div class="reveal">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Everything a game <em>studio needs</em></h2>
+      <p class="section-desc">From first idea to first launch — we cover every dimension of building a company in the videogame industry.</p>
+    </div>
+
+    <div class="services-grid" role="list">
+      <article class="service-card reveal" style="--service-color: var(--pink);" role="listitem" tabindex="0">
+        <div class="service-num">01</div>
+        <div class="service-icon" style="background: rgba(255,181,200,0.15);">🏢</div>
+        <h3 class="service-name">Company Formation</h3>
+        <p class="service-desc">Legal setup, corporate structure, shareholder agreements, and fiscal registration — all tailored for game studios.</p>
+        <div class="service-arrow" aria-hidden="true">→</div>
+      </article>
+
+      <article class="service-card reveal reveal-delay-1" style="--service-color: var(--lavender);" role="listitem" tabindex="0">
+        <div class="service-num">02</div>
+        <div class="service-icon" style="background: rgba(201,184,255,0.15);">🎨</div>
+        <h3 class="service-name">Brand Identity</h3>
+        <p class="service-desc">Name, visual identity, tone of voice, and brand guidelines that make your studio unforgettable in a crowded market.</p>
+        <div class="service-arrow" aria-hidden="true">→</div>
+      </article>
+
+      <article class="service-card reveal reveal-delay-2" style="--service-color: var(--mint);" role="listitem" tabindex="0">
+        <div class="service-num">03</div>
+        <div class="service-icon" style="background: rgba(181,240,216,0.15);">💰</div>
+        <h3 class="service-name">Funding Strategy</h3>
+        <p class="service-desc">Pitch deck creation, investor introductions, grant applications, and funding roadmap design for indie and mid-size studios.</p>
+        <div class="service-arrow" aria-hidden="true">→</div>
+      </article>
+
+      <article class="service-card reveal reveal-delay-3" style="--service-color: var(--peach);" role="listitem" tabindex="0">
+        <div class="service-num">04</div>
+        <div class="service-icon" style="background: rgba(255,214,176,0.15);">🤝</div>
+        <h3 class="service-name">Team Assembly</h3>
+        <p class="service-desc">Recruitment strategy, co-founder matchmaking, culture design, and talent onboarding systems for studios at every stage.</p>
+        <div class="service-arrow" aria-hidden="true">→</div>
+      </article>
+
+      <article class="service-card reveal" style="--service-color: var(--sky);" role="listitem" tabindex="0">
+        <div class="service-num">05</div>
+        <div class="service-icon" style="background: rgba(181,222,255,0.15);">📣</div>
+        <h3 class="service-name">Go-to-Market</h3>
+        <p class="service-desc">Launch strategy, community building, publisher relations, and platform negotiations to maximize your game's reach.</p>
+        <div class="service-arrow" aria-hidden="true">→</div>
+      </article>
+
+      <article class="service-card reveal reveal-delay-1" style="--service-color: var(--lemon);" role="listitem" tabindex="0">
+        <div class="service-num">06</div>
+        <div class="service-icon" style="background: rgba(255,245,181,0.15);">📊</div>
+        <h3 class="service-name">Operations & Growth</h3>
+        <p class="service-desc">Business processes, KPI frameworks, revenue models, and growth systems that scale with your studio's success.</p>
+        <div class="service-arrow" aria-hidden="true">→</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PRODUCTS
+  ============================================= -->
+  <section id="products" aria-label="Products">
+    <div class="reveal">
+      <div class="section-label">Our Products</div>
+      <h2 class="section-title">Tools built for <em>builders</em></h2>
+      <p class="section-desc">Beyond consulting, EMPRESA develops proprietary products that game studios use every day.</p>
+    </div>
+
+    <div class="products-layout">
+      <article class="product-card featured reveal">
+        <div class="product-visual" style="background: linear-gradient(135deg, var(--lavender), var(--pink));">🚀</div>
+        <div class="product-info">
+          <div class="product-tag">Flagship Product</div>
+          <h3 class="product-name">StudioOS</h3>
+          <p class="product-desc">The all-in-one operating system for game studios. Project tracking, royalty management, publisher contracts, HR, and finance — built specifically for the creative chaos of game development.</p>
+          <a href="#contact" class="product-link">Request Early Access →</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal reveal-delay-1">
+        <div class="product-visual" style="background: linear-gradient(135deg, var(--mint), var(--sky));">📋</div>
+        <div class="product-info">
+          <div class="product-tag">Template Library</div>
+          <h3 class="product-name">FounderKit</h3>
+          <p class="product-desc">150+ legal templates, financial models, pitch decks, and playbooks crafted for game studio founders.</p>
+          <a href="#contact" class="product-link">Explore Kit →</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal reveal-delay-2">
+        <div class="product-visual" style="background: linear-gradient(135deg, var(--peach), var(--lemon));">🌐</div>
+        <div class="product-info">
+          <div class="product-tag">Community</div>
+          <h3 class="product-name">DevNetwork</h3>
+          <p class="product-desc">Private community of 2,000+ game studio founders, investors, and publishers sharing knowledge and deals.</p>
+          <a href="#contact" class="product-link">Join the Network →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PORTFOLIO
+  ============================================= -->
+  <section id="portfolio" aria-label="Portfolio">
+    <div class="reveal">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Studios we've <em>forged</em></h2>
+      <p class="section-desc">Every studio in our portfolio started as a spark. We turned them into companies.</p>
+    </div>
+
+    <div class="portfolio-filter reveal" role="group" aria-label="Portfolio filters">
+      <button class="filter-btn active" onclick="filterPortfolio('all', this)" aria-pressed="true">All</button>
+      <button class="filter-btn" onclick="filterPortfolio('indie', this)" aria-pressed="false">Indie</button>
+      <button class="filter-btn" onclick="filterPortfolio('mid', this)" aria-pressed="false">Mid-size</button>
+      <button class="filter-btn" onclick="filterPortfolio('mobile', this)" aria-pressed="false">Mobile</button>
+      <button class="filter-btn" onclick="filterPortfolio('vr', this)" aria-pressed="false">VR/AR</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+      <article class="portfolio-item reveal" data-cat="indie" tabindex="0" aria-label="Neon Drift studio project">
+        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--pink), var(--lavender));">🎮</div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-meta">
+            <div class="portfolio-client">Indie · 2023</div>
+            <div class="portfolio-title">Neon Drift Studio</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-item reveal reveal-delay-1" data-cat="mobile" tabindex="0" aria-label="PixelBlossom studio project">
+        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--mint), var(--sky));">🌸</div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-meta">
+            <div class="portfolio-client">Mobile · 2023</div>
+            <div class="portfolio-title">PixelBlossom Games</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-item reveal reveal-delay-2" data-cat="vr" tabindex="0" aria-label="Void Horizon studio project">
+        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--lavender), var(--ink2));">🥽</div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-meta">
+            <div class="portfolio-client">VR/AR · 2022</div>
+            <div class="portfolio-title">Void Horizon XR</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-item reveal" data-cat="mid" tabindex="0" aria-label="Waveform Games studio project" style="grid-column: span 2;">
+        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--peach), var(--pink), var(--lemon)); height: 100%;">🎵</div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-meta">
+            <div class="portfolio-client">Mid-size · 2022</div>
+            <div class="portfolio-title">Waveform Games</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-item reveal reveal-delay-1" data-cat="indie" tabindex="0" aria-label="Bramble Forge studio project">
+        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--mint), var(--lemon));">🌿</div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-meta">
+            <div class="portfolio-client">Indie · 2024</div>
+            <div class="portfolio-title">Bramble Forge</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-item reveal reveal-delay-2" data-cat="mobile" tabindex="0" aria-label="Solstice Tap studio project">
+        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--sky), var(--lavender));">☀️</div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-meta">
+            <div class="portfolio-client">Mobile · 2024</div>
+            <div class="portfolio-title">Solstice Tap</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =============================================
+       GALLERY
+  ============================================= -->
+  <section id="gallery" aria-label="Gallery">
+    <div class="reveal">
+      <div class="section-label">Behind the Scenes</div>
+      <h2 class="section-title">Life inside <em>EMPRESA</em></h2>
+      <p class="section-desc" style="color: var(--ink2);">Where the magic of company-building happens — our process, our people, our obsession.</p>
+    </div>
+    <!-- Gallery items rendered dynamically by script.js -->
+    <div class="gallery-masonry reveal" role="list"></div>
+  </section>
+
+  <!-- Gallery Modal -->
+  <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Gallery detail">
+    <div class="gallery-modal-inner">
+      <button class="gallery-modal-close" id="modalClose" aria-label="Close gallery">✕</button>
+      <div class="gallery-modal-emoji" id="modalEmoji"></div>
+      <div class="gallery-modal-title" id="modalTitle"></div>
+      <div class="gallery-modal-desc" id="modalDesc"></div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       CONTACT
+  ============================================= -->
+  <section id="contact" aria-label="Contact">
+    <div class="contact-info reveal">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Ready to build your <em>studio?</em></h2>
+      <p class="section-desc">Whether you have a concept, a prototype, or already shipped a game — let's talk about building the company around it.</p>
+
+      <div class="contact-details" role="list">
+        <div class="contact-detail" role="listitem">
+          <div class="contact-detail-icon" aria-hidden="true">📍</div>
+          <div class="contact-detail-text">
+            <div class="contact-detail-label">Location</div>
+            Av. Providencia 1234, Santiago, Chile
+          </div>
+        </div>
+        <div class="contact-detail" role="listitem">
+          <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+          <div class="contact-detail-text">
+            <div class="contact-detail-label">Email</div>
+            hello@empresa.studio
+          </div>
+        </div>
+        <div class="contact-detail" role="listitem">
+          <div class="contact-detail-icon" aria-hidden="true">📞</div>
+          <div class="contact-detail-text">
+            <div class="contact-detail-label">Phone</div>
+            +56 2 2345 6789
+          </div>
+        </div>
+        <div class="contact-detail" role="listitem">
+          <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+          <div class="contact-detail-text">
+            <div class="contact-detail-label">Office Hours</div>
+            Mon – Fri, 9:00 – 18:00 CLT
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal reveal-delay-2">
+      <div id="formWrapper">
+        <div class="form-title">Tell us about your project</div>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" placeholder="Indie" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" placeholder="Developer" required aria-required="true" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="you@studio.com" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="stage">Studio Stage</label>
+            <select id="stage" name="stage">
+              <option value="">Select your stage…</option>
+              <option>Concept — I have an idea</option>
+              <option>Pre-production — I have a prototype</option>
+              <option>In Development — Game in progress</option>
+              <option>Shipped — Looking to grow</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your vision *</label>
+            <textarea id="message" name="message" placeholder="What kind of game are you making? What do you need help with?" required aria-required="true"></textarea>
+          </div>
+          <button type="submit" class="form-submit" aria-label="Send message">
+            Send Message <span aria-hidden="true">✨</span>
+          </button>
+        </form>
+      </div>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="form-success-icon">🎮</div>
+        <div class="form-success-text">Message received! We'll be in touch within 48 hours.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer role="contentinfo">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <span class="nav-logo-dot"></span>
+          EMPRESA
+        </a>
+        <p class="footer-tagline">We build companies for videogame developers. From spark to studio — we've got every step covered.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Discord">🎮</a>
+          <a href="#" class="social-link" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Company Formation</a></li>
+          <li><a href="#services">Brand Identity</a></li>
+          <li><a href="#services">Funding Strategy</a></li>
+          <li><a href="#services">Team Assembly</a></li>
+          <li><a href="#services">Go-to-Market</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="#products">StudioOS</a></li>
+          <li><a href="#products">FounderKit</a></li>
+          <li><a href="#products">DevNetwork</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#gallery">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 EMPRESA Studio S.A. · All rights reserved.</p>
+      <p class="footer-copy">Santiago, Chile · hello@empresa.studio</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
 </body>
 </html>
