@@ -127,7 +127,7 @@ section { padding: 120px 48px; }
 
 /* PRODUCTS */
 #products { background: var(--lemon); }
-.products-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.products-layout { display: flex; flex-wrap: wrap; gap: 32px; }
 .product-card { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); transition: transform var(--transition), box-shadow var(--transition); cursor: none; }
 .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
 .product-card.featured { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }

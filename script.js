@@ -94,59 +94,6 @@ function filterPortfolio(cat, btn) {
   });
 }
 
-/* ---- Gallery — dynamic render + modal ---- */
-const galleryData = [
-  { emoji: '🎮', h: 220, bg: 'linear-gradient(135deg,var(--pink),var(--lavender))',   title: 'Kickoff Workshops',   desc: 'Every studio starts with a 2-day intensive workshop where we map the entire business from IP to IP address.' },
-  { emoji: '🖌️', h: 300, bg: 'linear-gradient(135deg,var(--mint),var(--sky))',        title: 'Brand Sprint',        desc: 'Three days. One identity. Our design team runs rapid branding sprints that define visual language in record time.' },
-  { emoji: '📊', h: 180, bg: 'linear-gradient(135deg,var(--peach),var(--lemon))',     title: 'Pitch Decks',         desc: '47 pitch decks. $12M raised. Our financial storytelling turns game visions into investor conviction.' },
-  { emoji: '🤝', h: 260, bg: 'linear-gradient(135deg,var(--lavender),var(--pink))',   title: 'Co-founder Matching', desc: 'Our proprietary matching system has connected 38 co-founder pairs across disciplines.' },
-  { emoji: '🚀', h: 200, bg: 'linear-gradient(135deg,var(--sky),var(--mint))',        title: 'Launch Days',         desc: 'Nothing beats the energy of a live launch. We coordinate every detail from Steam page to social campaign.' },
-  { emoji: '🌍', h: 280, bg: 'linear-gradient(135deg,var(--lemon),var(--peach))',     title: 'Global Network',      desc: 'Our DevNetwork spans 42 countries — connecting studios, publishers, and investors worldwide.' },
-  { emoji: '💡', h: 190, bg: 'linear-gradient(135deg,var(--pink),var(--peach))',      title: 'Ideation Labs',       desc: 'Monthly open labs where developers bring raw concepts and leave with validated business cases.' },
-  { emoji: '🏆', h: 240, bg: 'linear-gradient(135deg,var(--mint),var(--lavender))',   title: 'Award Season',        desc: 'Our studios have won 23 industry awards in the past two years alone — from BAFTA nominees to IGF finalists.' },
-];
-
-const masonry = document.querySelector('.gallery-masonry');
-
-galleryData.forEach(g => {
-  const item = document.createElement('article');
-  item.className = 'gallery-item reveal';
-  item.setAttribute('tabindex', '0');
-  item.setAttribute('role', 'listitem');
-  item.setAttribute('aria-label', g.title);
-  item.innerHTML = `
-    <div class="gallery-visual" style="height:${g.h}px; background:${g.bg}; font-size:2.5rem;">
-      ${g.emoji}
-    </div>`;
-  item.addEventListener('click', () => openModal(g));
-  item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openModal(g); });
-  masonry.appendChild(item);
-  setTimeout(() => observer.observe(item), 50);
-});
-
-/* Gallery modal */
-const modal = document.getElementById('galleryModal');
-
-function openModal(g) {
-  document.getElementById('modalEmoji').textContent = g.emoji;
-  document.getElementById('modalTitle').textContent = g.title;
-  document.getElementById('modalDesc').textContent  = g.desc;
-  modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-document.getElementById('modalClose').addEventListener('click', () => {
-  modal.classList.remove('open');
-  document.body.style.overflow = '';
-});
-
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-});
-
 /* ---- Contact form ---- */
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();

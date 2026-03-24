@@ -36,7 +36,6 @@
     <a href="#services" onclick="closeMobile()">Servicios</a>
     <a href="#products" onclick="closeMobile()">Productos</a>
     <a href="#portfolio" onclick="closeMobile()">Portafolio</a>
-    <a href="#gallery" onclick="closeMobile()">Galleria</a>
     <a href="#contact" onclick="closeMobile()">Contacto</a>
   </div>
 
@@ -53,7 +52,6 @@
       <li><a href="#services">Servicios</a></li>
       <li><a href="#products">Productos</a></li>
       <li><a href="#portfolio">Portafolio</a></li>
-      <li><a href="#gallery">Galleria</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
     <a href="#contact" class="nav-cta">¿Tienes una idea flotando por tu cabeza?</a>
@@ -197,39 +195,39 @@
   ============================================= -->
   <section id="products" aria-label="Products">
     <div class="reveal">
-      <div class="section-label">Our Products</div>
+      <div class="section-label">Mis servicios</div>
       <h2 class="section-title">Tools built for <em>builders</em></h2>
       <p class="section-desc">Beyond consulting, EMPRESA develops proprietary products that game studios use every day.</p>
     </div>
 
     <div class="products-layout">
       <article class="product-card featured reveal">
-        <div class="product-visual" style="background: linear-gradient(135deg, var(--lavender), var(--pink));">🚀</div>
+        <div class="product-visual" style="background: url('Referencias/Ecobridge.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">🚀</div>
         <div class="product-info">
-          <div class="product-tag">Flagship Product</div>
-          <h3 class="product-name">StudioOS</h3>
-          <p class="product-desc">The all-in-one operating system for game studios. Project tracking, royalty management, publisher contracts, HR, and finance — built specifically for the creative chaos of game development.</p>
-          <a href="#contact" class="product-link">Request Early Access →</a>
+          <div class="product-tag">Game Design</div>
+          <h3 class="product-name">Creacion de entornos</h3>
+          <p class="product-desc">Mediante creacion de entornos virtuales se facilita la creacion de experiencias inmersivas.</p>
+          <a href="#contact" class="product-link">Crear mi propa experiencia→</a>
         </div>
       </article>
 
       <article class="product-card reveal reveal-delay-1">
-        <div class="product-visual" style="background: linear-gradient(135deg, var(--mint), var(--sky));">📋</div>
+        <div class="product-visual" style="background: url('Referencias/ModularMedieval.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">📋</div>
         <div class="product-info">
-          <div class="product-tag">Template Library</div>
-          <h3 class="product-name">FounderKit</h3>
-          <p class="product-desc">150+ legal templates, financial models, pitch decks, and playbooks crafted for game studio founders.</p>
-          <a href="#contact" class="product-link">Explore Kit →</a>
+          <div class="product-tag">Modelado 3D</div>
+          <h3 class="product-name">Assets modulares</h3>
+          <p class="product-desc">Mediante creacion de objetos modulares se pueden crear una variedad de entornos virtuales.</p>
+          <a href="#contact" class="product-link">Decorar mi entorno →</a>
         </div>
       </article>
 
       <article class="product-card reveal reveal-delay-2">
-        <div class="product-visual" style="background: linear-gradient(135deg, var(--peach), var(--lemon));">🌐</div>
+        <div class="product-visual" style="background: url('Referencias/TelefericoToma1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">🌐</div>
         <div class="product-info">
-          <div class="product-tag">Community</div>
-          <h3 class="product-name">DevNetwork</h3>
-          <p class="product-desc">Private community of 2,000+ game studio founders, investors, and publishers sharing knowledge and deals.</p>
-          <a href="#contact" class="product-link">Join the Network →</a>
+          <div class="product-tag">Animacion</div>
+          <h3 class="product-name">Product Design</h3>
+          <p class="product-desc">Creacion de objeto virtual para hacer un showcase del producto o servicio.</p>
+          <a href="#contact" class="product-link">Mostremos tu producto →</a>
         </div>
       </article>
     </div>
@@ -247,14 +245,14 @@
 
     <div class="portfolio-filter reveal" role="group" aria-label="Portfolio filters">
       <button class="filter-btn active" onclick="filterPortfolio('all', this)" aria-pressed="true">All</button>
-      <button class="filter-btn" onclick="filterPortfolio('indie', this)" aria-pressed="false">Assets</button>
-      <button class="filter-btn" onclick="filterPortfolio('mid', this)" aria-pressed="false">Build</button>
-      <button class="filter-btn" onclick="filterPortfolio('mobile', this)" aria-pressed="false">Animation</button>
-      <button class="filter-btn" onclick="filterPortfolio('vr', this)" aria-pressed="false">Juego</button>
+      <button class="filter-btn" onclick="filterPortfolio('Assets', this)" aria-pressed="false">Assets</button>
+      <button class="filter-btn" onclick="filterPortfolio('Build', this)" aria-pressed="false">Build</button>
+      <button class="filter-btn" onclick="filterPortfolio('Animation', this)" aria-pressed="false">Animation</button>
+      <button class="filter-btn" onclick="filterPortfolio('Product', this)" aria-pressed="false">Product</button>
     </div>
 
     <div class="portfolio-grid" id="portfolioGrid">
-      <article class="portfolio-item reveal" data-cat="indie" tabindex="0" aria-label="Neon Drift studio project">
+      <article class="portfolio-item reveal" data-cat="Assets" tabindex="0" aria-label="Neon Drift studio project">
         <div class="portfolio-visual" style="background-image: url('Referencias/DinosDinos.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">🎮</div>
         <div class="portfolio-overlay">
           <div class="portfolio-meta">
@@ -264,117 +262,95 @@
         </div>
       </article>
 
-      <article class="portfolio-item reveal reveal-delay-1" data-cat="mobile" tabindex="0" aria-label="PixelBlossom studio project">
-        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--mint), var(--sky));">🌸</div>
+      <article class="portfolio-item reveal reveal-delay-1" data-cat="Assets" tabindex="0" aria-label="PixelBlossom studio project">
+        <div class="portfolio-visual" style="background-image: url('Referencias/ModularDisco.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">🌸</div>
         <div class="portfolio-overlay">
           <div class="portfolio-meta">
-            <div class="portfolio-client">Mobile · 2023</div>
-            <div class="portfolio-title">PixelBlossom Games</div>
+            <div class="portfolio-client">Assets · 2023</div>
+            <div class="portfolio-title">Le Saussages</div>
           </div>
         </div>
       </article>
 
-      <article class="portfolio-item reveal reveal-delay-2" data-cat="vr" tabindex="0" aria-label="Void Horizon studio project">
-        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--lavender), var(--ink2));">🥽</div>
+      <article class="portfolio-item reveal reveal-delay-2" data-cat="Build" tabindex="0" aria-label="Void Horizon studio project">
+        <div class="portfolio-visual" style="background-image: url('Referencias/TrenJuego.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">🥽</div>
         <div class="portfolio-overlay">
           <div class="portfolio-meta">
-            <div class="portfolio-client">VR/AR · 2022</div>
-            <div class="portfolio-title">Void Horizon XR</div>
+            <div class="portfolio-client">Build · 2024</div>
+            <div class="portfolio-title">Simulador de limpieza metrotren VR</div>
           </div>
         </div>
       </article>
 
-      <article class="portfolio-item reveal" data-cat="mid" tabindex="0" aria-label="Waveform Games studio project" style="grid-column: span 2;">
-        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--peach), var(--pink), var(--lemon)); height: 100%;">🎵</div>
+      <article class="portfolio-item reveal" data-cat="Product" tabindex="0" aria-label="Waveform Games studio project" style="grid-column: span 2;">
+        <div class="portfolio-visual" style="background-image: url('Referencias/CeniceroGanador.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">🎵</div>
         <div class="portfolio-overlay">
           <div class="portfolio-meta">
-            <div class="portfolio-client">Mid-size · 2022</div>
-            <div class="portfolio-title">Waveform Games</div>
+            <div class="portfolio-client">Product · 2022</div>
+            <div class="portfolio-title">Ecolillas, cenicero funcional</div>
           </div>
         </div>
       </article>
 
       <article class="portfolio-item reveal reveal-delay-1" data-cat="indie" tabindex="0" aria-label="Bramble Forge studio project">
-        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--mint), var(--lemon));">🌿</div>
+        <div class="portfolio-visual" style="background-image: url('Referencias/AudiometroOficina.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">🌿</div>
         <div class="portfolio-overlay">
           <div class="portfolio-meta">
-            <div class="portfolio-client">Indie · 2024</div>
-            <div class="portfolio-title">Bramble Forge</div>
+            <div class="portfolio-client">Build · 2024</div>
+            <div class="portfolio-title">Audiometro oficina</div>
           </div>
         </div>
       </article>
 
-      <article class="portfolio-item reveal reveal-delay-2" data-cat="mobile" tabindex="0" aria-label="Solstice Tap studio project">
-        <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--sky), var(--lavender));">☀️</div>
+      <article class="portfolio-item reveal reveal-delay-2" data-cat="Assets" tabindex="0" aria-label="Solstice Tap studio project">
+        <div class="portfolio-visual" style="background-image: url('Referencias/ModularGrua.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">☀️</div>
         <div class="portfolio-overlay">
           <div class="portfolio-meta">
-            <div class="portfolio-client">Mobile · 2024</div>
-            <div class="portfolio-title">Solstice Tap</div>
+            <div class="portfolio-client">Assets · 2024</div>
+            <div class="portfolio-title">Simulador de Grua VR</div>
           </div>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- =============================================
-       GALLERY
-  ============================================= -->
-  <section id="gallery" aria-label="Gallery">
-    <div class="reveal">
-      <div class="section-label">Behind the Scenes</div>
-      <h2 class="section-title">Life inside <em>EMPRESA</em></h2>
-      <p class="section-desc" style="color: var(--ink2);">Where the magic of company-building happens — our process, our people, our obsession.</p>
-    </div>
-    <!-- Gallery items rendered dynamically by script.js -->
-    <div class="gallery-masonry reveal" role="list"></div>
-  </section>
-
-  <!-- Gallery Modal -->
-  <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Gallery detail">
-    <div class="gallery-modal-inner">
-      <button class="gallery-modal-close" id="modalClose" aria-label="Close gallery">✕</button>
-      <div class="gallery-modal-emoji" id="modalEmoji"></div>
-      <div class="gallery-modal-title" id="modalTitle"></div>
-      <div class="gallery-modal-desc" id="modalDesc"></div>
-    </div>
-  </div>
 
   <!-- =============================================
        CONTACT
   ============================================= -->
   <section id="contact" aria-label="Contact">
     <div class="contact-info reveal">
-      <div class="section-label">Get in Touch</div>
-      <h2 class="section-title">Ready to build your <em>studio?</em></h2>
-      <p class="section-desc">Whether you have a concept, a prototype, or already shipped a game — let's talk about building the company around it.</p>
+      <div class="section-label">Pongamonos en contacto</div>
+      <h2 class="section-title">Listo para prototipar <em>la idea?</em></h2>
+      <p class="section-desc">Ya sea que tengas la idea, un prototipo, o el juego lanzado — exprimamos al maximo ese producto, hablemos.</p>
 
       <div class="contact-details" role="list">
         <div class="contact-detail" role="listitem">
           <div class="contact-detail-icon" aria-hidden="true">📍</div>
           <div class="contact-detail-text">
-            <div class="contact-detail-label">Location</div>
-            Av. Providencia 1234, Santiago, Chile
+            <div class="contact-detail-label">Locacion</div>
+            Av. Costanera 415, Santiago, Chile
           </div>
         </div>
         <div class="contact-detail" role="listitem">
           <div class="contact-detail-icon" aria-hidden="true">✉️</div>
           <div class="contact-detail-text">
             <div class="contact-detail-label">Email</div>
-            hello@empresa.studio
+            javierale9988@gmail.com
           </div>
         </div>
         <div class="contact-detail" role="listitem">
           <div class="contact-detail-icon" aria-hidden="true">📞</div>
           <div class="contact-detail-text">
-            <div class="contact-detail-label">Phone</div>
-            +56 2 2345 6789
+            <div class="contact-detail-label">Numero</div>
+            +56 9 4895 2705
           </div>
         </div>
         <div class="contact-detail" role="listitem">
           <div class="contact-detail-icon" aria-hidden="true">🕐</div>
           <div class="contact-detail-text">
-            <div class="contact-detail-label">Office Hours</div>
-            Mon – Fri, 9:00 – 18:00 CLT
+            <div class="contact-detail-label">Hora de atención</div>
+            Lun – Vie, 9:00 – 20:00 GMT -3
           </div>
         </div>
       </div>
@@ -382,44 +358,44 @@
 
     <div class="contact-form reveal reveal-delay-2">
       <div id="formWrapper">
-        <div class="form-title">Tell us about your project</div>
+        <div class="form-title">Cuentame tu proyecto</div>
         <form id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="fname">First Name *</label>
-              <input type="text" id="fname" name="fname" placeholder="Indie" required aria-required="true" />
+              <label for="fname">Nombre *</label>
+              <input type="text" id="fname" name="fname" placeholder="Juan" required aria-required="true" />
             </div>
             <div class="form-group">
-              <label for="lname">Last Name *</label>
-              <input type="text" id="lname" name="lname" placeholder="Developer" required aria-required="true" />
+              <label for="lname">Apellido *</label>
+              <input type="text" id="lname" name="lname" placeholder="Espinoza" required aria-required="true" />
             </div>
           </div>
           <div class="form-group">
-            <label for="email">Email Address *</label>
+            <label for="email">Email *</label>
             <input type="email" id="email" name="email" placeholder="you@studio.com" required aria-required="true" />
           </div>
           <div class="form-group">
-            <label for="stage">Studio Stage</label>
+            <label for="stage">Etapa de la idea</label>
             <select id="stage" name="stage">
               <option value="">Select your stage…</option>
-              <option>Concept — I have an idea</option>
-              <option>Pre-production — I have a prototype</option>
-              <option>In Development — Game in progress</option>
-              <option>Shipped — Looking to grow</option>
+              <option>Concepto — Tengo la idea</option>
+              <option>Pre-produccion — Tengo un prototipo</option>
+              <option>En desarrollo — Juego en progreso</option>
+              <option>lanzamiento — Buscando crecimiento</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Tell us about your vision *</label>
+            <label for="message">Cuentame tu vision hacerca el proyecto *</label>
             <textarea id="message" name="message" placeholder="What kind of game are you making? What do you need help with?" required aria-required="true"></textarea>
           </div>
           <button type="submit" class="form-submit" aria-label="Send message">
-            Send Message <span aria-hidden="true">✨</span>
+            Enviar Mensaje <span aria-hidden="true">✨</span>
           </button>
         </form>
       </div>
       <div class="form-success" id="formSuccess" role="status" aria-live="polite">
         <div class="form-success-icon">🎮</div>
-        <div class="form-success-text">Message received! We'll be in touch within 48 hours.</div>
+        <div class="form-success-text">¡Mensaje recibido! Nos pondremos en contacto.</div>
       </div>
     </div>
   </section>
@@ -432,43 +408,43 @@
       <div class="footer-brand">
         <a href="#home" class="nav-logo">
           <span class="nav-logo-dot"></span>
-          EMPRESA
+          Javier Cruz
         </a>
-        <p class="footer-tagline">We build companies for videogame developers. From spark to studio — we've got every step covered.</p>
-        <div class="footer-social" aria-label="Social media links">
+        <p class="footer-tagline">No importa si es antigua o nueva la idea, puede brillar de igualmanera.</p>
+        <div class="footer-social" aria-label="Contacto links">
           <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-          <a href="https://mentorcruise.com/blog/21-high-paying-creative-careers-for-tech-professionals-ultimate-career-transition-guide/" class="social-link" aria-label="Discord">🎮</a>
-          <a href="#" class="social-link" aria-label="Instagram">◎</a>
+          <a href="https://www.linkedin.com/in/javier-cruz-cornejo-105343301" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="https://discord.com/users/estupidosensualflanders" class="social-link" aria-label="Discord">🎮</a>
+          <a href="https://www.instagram.com/ab3jorro/" class="social-link" aria-label="Instagram">◎</a>
         </div>
       </div>
 
       <div>
-        <div class="footer-col-title">Services</div>
+        <div class="footer-col-title">Servicios</div>
         <ul class="footer-links">
-          <li><a href="#services">Company Formation</a></li>
-          <li><a href="#services">Brand Identity</a></li>
-          <li><a href="#services">Funding Strategy</a></li>
-          <li><a href="#services">Team Assembly</a></li>
-          <li><a href="#services">Go-to-Market</a></li>
+          <li><a href="#services">Formacion</a></li>
+          <li><a href="#services">identidad</a></li>
+          <li><a href="#services">Estrategia</a></li>
+          <li><a href="#services">Colavoracion</a></li>
+          <li><a href="#services">Lanzamiento</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="footer-col-title">Products</div>
+        <div class="footer-col-title">Productos</div>
         <ul class="footer-links">
-          <li><a href="#products">StudioOS</a></li>
-          <li><a href="#products">FounderKit</a></li>
-          <li><a href="#products">DevNetwork</a></li>
+          <li><a href="#products">Creacion de entornos</a></li>
+          <li><a href="#products">Assets modulares</a></li>
+          <li><a href="#products">Product Design</a></li>
         </ul>
       </div>
 
       <div>
         <div class="footer-col-title">Company</div>
         <ul class="footer-links">
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#gallery">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="docs/CV Javier Cruz.pdf" download>Curriculum Vitae</a></li>
+          <li><a href="#contact">Contacto</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Blog</a></li>
         </ul>
@@ -476,8 +452,8 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copy">© 2024 EMPRESA Studio S.A. · All rights reserved.</p>
-      <p class="footer-copy">Santiago, Chile · hello@empresa.studio</p>
+      <p class="footer-copy">© 2026 Javier Cruz Studio S.A. · All rights reserved.</p>
+      <p class="footer-copy">Santiago, Chile · javierale9988@gmail.com</p>
     </div>
   </footer>
 
